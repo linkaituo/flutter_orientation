@@ -20,7 +20,7 @@ class OrientationPlugin {
         _stringify(overlays),
       );
     } else {
-      SystemChrome.setEnabledSystemUIOverlays(overlays);
+      // SystemChrome.setEnabledSystemUIOverlays(overlays);
     }
   }
 
