@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+// import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** OrientationPlugin */
 public class OrientationPlugin implements FlutterPlugin, ActivityAware {
@@ -21,14 +21,17 @@ public class OrientationPlugin implements FlutterPlugin, ActivityAware {
   // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
   // depending on the user's project. onAttachedToEngine or registerWith must both be defined
   // in the same class.
-  public static void registerWith(Registrar registrar) {
-    MethodCallHandlerImpl handler = new MethodCallHandlerImpl();
-    handler.startListening(registrar.activity(), registrar.messenger());
-  }
+  // public static void registerWith(Registrar registrar) {
+  //   MethodCallHandlerImpl handler = new MethodCallHandlerImpl();
+  //   handler.startListening(registrar.activity(), registrar.messenger());
+  // }
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
     flutterPluginBinding = binding;
+
+    MethodCallHandlerImpl handler = new MethodCallHandlerImpl();
+    handler.startListening(registrar.activity(), registrar.messenger());
   }
 
   @Override
