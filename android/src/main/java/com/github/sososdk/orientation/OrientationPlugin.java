@@ -7,6 +7,8 @@ import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 // import io.flutter.plugin.common.PluginRegistry.Registrar;
 
+
+
 /** OrientationPlugin */
 public class OrientationPlugin implements FlutterPlugin, ActivityAware {
   private @Nullable FlutterPluginBinding flutterPluginBinding;
