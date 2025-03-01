@@ -6,7 +6,7 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 // import io.flutter.plugin.common.PluginRegistry.Registrar;
-
+import android.app.Activity;
 
 
 /** OrientationPlugin */
@@ -34,7 +34,7 @@ public class OrientationPlugin implements FlutterPlugin, ActivityAware {
 
     MethodCallHandlerImpl handler = new MethodCallHandlerImpl();
     // handler.startListening(registrar.activity(), registrar.messenger());
-    handler.startListening(binding.getApplicationContext(), binding.getBinaryMessenger());
+    handler.startListening((Activity)binding.getApplicationContext(), binding.getBinaryMessenger());
   }
 
   @Override
