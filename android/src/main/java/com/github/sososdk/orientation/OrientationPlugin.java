@@ -40,6 +40,11 @@ public class OrientationPlugin implements FlutterPlugin, ActivityAware {
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     flutterPluginBinding = null;
+
+    if (methodCallHandler == null) {
+      return;
+    }
+    methodCallHandler.stopListening();
   }
 
   @Override
