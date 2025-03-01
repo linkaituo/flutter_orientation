@@ -33,7 +33,8 @@ public class OrientationPlugin implements FlutterPlugin, ActivityAware {
     flutterPluginBinding = binding;
 
     MethodCallHandlerImpl handler = new MethodCallHandlerImpl();
-    handler.startListening(registrar.activity(), registrar.messenger());
+    // handler.startListening(registrar.activity(), registrar.messenger());
+    handler.startListening(binding.getApplicationContext(), binding.getBinaryMessenger());
   }
 
   @Override
